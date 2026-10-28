@@ -6,7 +6,7 @@
             height: 100vh;
             padding: 0;
             margin: 0;
-            background-color: #fffbeb;
+            background: radial-gradient(circle at top left, rgba(217, 154, 191, 1) 0%, rgb(238, 135, 135) 50%, rgb(223, 161, 143) 100%);
             font-family: 'Rubik Mono One', sans-serif;
             font-size: 30px;
             user-select: none;
@@ -23,12 +23,27 @@
             width: 100%;
             text-align: center;
         }
+        img {
+            will-change: transform, opacity;
+            opacity: 0%;
+            animation: fade_in 1.5s ease-out 0.25s forwards;
+        }
+        @keyframes fade_in {
+            from {
+                opacity: 0%;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 100%;
+                transform: scale(1);
+            }
+        }
         </style>
     </head>
     <body>
         <div id="container">
             <p>
-                <img src="assets/images/construction.svg" height="22"><span> W I P </span><img src="assets/images/construction.svg" height="22">
+                <img src="assets/images/apollo_by_tigerstooth.png" alt="apollo_by_tigerstooth">
             </p>
         </div>
     </body>
