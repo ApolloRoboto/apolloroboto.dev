@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lilita One">
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                background:
+                    url("assets/noise.svg"),
+                    radial-gradient(circle at top left, rgba(217, 154, 191) 0%, rgb(238, 135, 135) 50%, rgb(223, 161, 143) 100%);
+                background-blend-mode: color-burn;
+                font-family: "Lilita One";
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-block-start: 38px;
+                padding-block-end: 25vh;
+                gap: 38px;
+                user-select: none;
+                position: relative;
+            }
+
+            h1 {
+                padding: 0;
+                margin: 0;
+                font-size: 57px;
+                color: #1A100ADF;
+                letter-spacing: 5%;
+            }
+
+            .url_button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 50px;
+                padding-inline-start: 50px;
+                width: 500px;
+                max-width: 500px;
+                min-width: 400px;
+                height: 100px;
+                border-radius: 4px;
+                box-shadow: 4px 4px 8px #00000066;
+                text-decoration: none;
+                transition: all .15s ease-in-out;
+                background-image: url("assets/button.svg");
+                background-repeat: none;
+            }
+            .url_button:hover {
+                scale: 102.5%;
+                box-shadow: 9px 9px 14px #00000066;
+            }
+            .url_button svg,
+            .url_button img {
+                width: 50px;
+                height: 50px;
+                color: #1A100ADF;
+            }
+            .url_button h2 {
+                font-size: 28px;
+                color: #1A100ADF;
+                padding: 0;
+                margin: 0;
+            }
+            .url_button span {
+                font-size: 21px;
+                color: #1A100ADF;
+            }
+            .url_button small {
+                font-size: 18px;
+                opacity: 80%;
+            }
+
+            .sticker {
+                position: absolute;
+                width: 190px;
+                height: 190px;
+                top: 0px;
+                left: 50%;
+                translate: 364px 750px;
+                rotate: 22deg;
+                filter: drop-shadow(1px 2px 4px #000000CC);
+            }
+
+            .left_bit_text {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                bottom: 0;
+                width: 59px;
+                background-image: url("assets/apolloroboto_bit_text.svg");
+                background-repeat: repeat-y;
+                background-position: top;
+            }
+            .right_bit_text {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                bottom: 0;
+                width: 59px;
+                background-image: url("assets/apolloroboto_bit_text.svg");
+                background-repeat: repeat-y;
+                background-position: top;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <img src="assets/apollo_by_valkarasu_transparent.png" alt="Apollo by Valkarasu">
+
+        <h1>ApolloRoboto</h1>
+
+        <a class="url_button" href="https://bsky.app/profile/did:plc:s3xcflxtxenb74msfpyjkhjd">
+            <img src="assets/icons/bluesky.svg">
+            <div>
+                <h2>BlueSky</h2>
+                <span>@apolloroboto.dev</span>
+            </div>
+        </a>
+
+        <a class="url_button" href="https://twitter.com/Apollo_Roboto">
+            <img src="assets/icons/twitter.svg">
+            <div>
+                <h2>Twitter <small>(Formally known as X)</small></h2>
+                <span>@Apollo_Roboto</span>
+            </div>
+        </a>
+
+        <a class="url_button" href="https://vrchat.com/home/user/usr_f34f3c4d-56a7-4821-9aa4-51be458d421a">
+            <img src="assets/icons/vrchat.svg">
+            <div>
+                <h2>VRChat</h2>
+                <span>ApolloRoboto</span>
+            </div>
+        </a>
+
+        <a class="url_button" href="https://steamcommunity.com/id/ApolloRoboto/">
+            <img src="assets/icons/steam.svg">
+            <div>
+                <h2>Steam</h2>
+                <span>ApolloRoboto</span>
+            </div>
+        </a>
+
+        <a class="url_button" href="https://web.barq.app/profiles/1fcb3248-6b0b-4448-8680-1d28ed8b0959">
+            <img src="assets/icons/barq.svg">
+            <div>
+                <h2>Barq!</h2>
+                <span>@ApolloRoboto</span>
+            </div>
+        </a>
+
+        <a class="url_button" href="https://makerworld.com/en/@apolloroboto">
+            <img src="assets/icons/maker_world.svg">
+            <div>
+                <h2>Maker World</h2>
+                <span>@apolloroboto</span>
+            </div>
+        </a>
+
+        <a class="url_button" href="https://ko-fi.com/apolloroboto">
+            <img src="assets/icons/ko_fi.svg">
+            <div>
+                <h2>Ko-Fi</h2>
+                <span>@ApolloRoboto</span>
+            </div>
+        </a>
+
+        <img class="sticker" src="assets/apollo_by_tigerstooth_sticker.png" alt="Apollo by Tigerstooth">
+
+        <div class="left_bit_text"></div>
+
+        <div class="right_bit_text"></div>
+
+    </body>
+</html>
