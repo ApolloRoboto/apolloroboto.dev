@@ -1,0 +1,164 @@
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+    padding: 0;
+    margin: 0;
+    padding-block-start: 10vh;
+    padding-block-end: 33vh;
+    background:
+        url("noise.svg"),
+        radial-gradient(
+            circle at top left,
+            rgb(217, 154, 191) 0%,
+            /*rgb(240, 152, 185)*/
+            rgb(238, 135, 135) 50%,
+            rgb(223, 161, 143) 100%
+        );
+    background-blend-mode: color-burn;
+    font-family: "Lilita One";
+    user-select: none;
+    overflow-x: hidden;
+}
+
+
+/************************/
+
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 57px;
+    color: #1A100ADF;
+    letter-spacing: 5%;
+    line-height: 57px;
+}
+
+
+/************************/
+
+
+.url_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    padding-inline-start: 50px;
+    width: 60%;
+    max-width: 500px;
+    min-width: 400px;
+    height: 100px;
+    background-image: url("button.svg");
+    box-shadow: 4px 4px 8px #00000066;
+    border-radius: 4px;
+    text-decoration: none;
+    transition-property: scale, box-shadow;
+    transition-duration: .15s;
+    transition-timing-function: ease-in-out;
+}
+.url_button:hover {
+    scale: 102.5%;
+    box-shadow: 9px 9px 14px #00000066;
+}
+.url_button svg,
+.url_button img {
+    width: 50px;
+    height: 50px;
+    color: #1A100ADF;
+}
+.url_button h2 {
+    font-size: 28px;
+    color: #1A100ADF;
+    padding: 0;
+    margin: 0;
+}
+.url_button span {
+    font-size: 21px;
+    color: #1A100ADF;
+}
+.url_button small {
+    font-size: 18px;
+    opacity: 80%;
+}
+
+@media (max-width: 700px) {
+    .url_button {
+        padding-inline-start: 35px;
+        gap: 35px;
+        min-width: 390px;
+        width: 70%;
+    }
+}
+
+
+/************************/
+
+
+:root {
+    --bit-text-width: 59px;
+    --bit-text-gap: 30px;
+}
+.left_bit_text {
+    position: absolute;
+    top: var(--bit-text-gap);
+    left: var(--bit-text-gap);
+    bottom: 0;
+    width: var(--bit-text-width);
+    background-image: url("apolloroboto_bit_text.svg");
+    background-repeat: repeat-y;
+    background-position: top;
+    background-size: 100% auto;
+}
+.right_bit_text {
+    position: absolute;
+    top: var(--bit-text-gap);
+    right: var(--bit-text-gap);
+    bottom: 0;
+    width: var(--bit-text-width);
+    background-image: url("apolloroboto_bit_text.svg");
+    background-repeat: repeat-y;
+    background-position: top;
+    background-size: 100% auto;
+}
+
+@media (max-width: 700px) {
+    :root {
+        --bit-text-width: 43px;
+        --bit-text-gap: 15px;
+    }
+}
+@media (max-width: 590px) {
+    .right_bit_text,
+    .left_bit_text {
+        display: none;
+    }
+}
+
+
+/************************/
+
+
+.sticker {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    top: 0px;
+    left: 50%;
+    filter: drop-shadow(2px 2px 2px #000000BB);
+}
+#apollo_sticker {
+    translate: 385px 820px;
+    rotate: 22deg;
+}
+
+@media (max-width: 1340px) {
+    .sticker {
+        position: relative;
+        left: 0px;
+    }
+    #apollo_sticker {
+        translate: 140px 0px;
+    }
+}
