@@ -18,7 +18,6 @@ body {
         radial-gradient(
             circle at top left,
             rgb(217, 154, 191) 0%,
-            /*rgb(240, 152, 185)*/
             rgb(238, 135, 135) 50%,
             rgb(223, 161, 143) 100%
         );
@@ -54,8 +53,6 @@ h1 {
     max-width: 420px;
     min-width: 380px;
     height: 80px;
-    /*background-image: url("button_550x100.svg");
-    border-radius: 8px;*/
     background-image: url("button.svg");
     border-radius: 6px;
     box-shadow: 3px 4px 7px #00000066;
@@ -90,7 +87,6 @@ h1 {
     font-size: 18px;
     color: var(--secondary-text-color);
 }
-
 @media (max-width: 630px) {
     .url_button {
         padding-inline-start: 30px;
@@ -130,7 +126,6 @@ h1 {
     background-position: top;
     background-size: 100% auto;
 }
-
 @media (max-width: 630px) {
     /* get smaller */
     :root {
@@ -151,18 +146,34 @@ h1 {
 
 
 .sticker {
+    opacity: 100%;
+    scale: 100%;
     position: absolute;
     width: 190px;
     height: 190px;
     top: 0px;
     left: 50%;
-    filter: drop-shadow(2px 2px 2px #000000BB);
+    filter: drop-shadow(2px 2px 2px #000000AA);
+    animation-name: sticker_init;
+    animation-duration: 0.75s;
+    animation-delay: 0.25s;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    will-change: opacity, scale, filter, transform;
+    transition-property: scale, transform;
+    transition-duration: .15s;
+    transition-timing-function: ease-in-out;
+}
+.sticker:hover {
+    scale: 105%;
+    transform: rotate(2deg);
 }
 #apollo_sticker {
     translate: 385px 820px;
     rotate: 22deg;
 }
-
 @media (max-width: 1340px) {
     .sticker {
         position: relative;
@@ -170,5 +181,19 @@ h1 {
     }
     #apollo_sticker {
         translate: 140px 0px;
+    }
+}
+@keyframes sticker_init {
+    from {
+        opacity: 0%;
+        scale: 115%;
+        filter: drop-shadow(10px 7px 12px #00000044);
+        transform: rotate(6deg);
+    }
+    to {
+        opacity: 100%;
+        scale: 100%;
+        filter: drop-shadow(2px 2px 2px #000000AA);
+        transform: rotate(0deg);
     }
 }
